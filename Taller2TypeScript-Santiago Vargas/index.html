@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TV Series</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      .navbar {
+        background-color: #24a4bc;
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .logo {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+        max-width: 100px;
+        height: auto;
+      }
+
+      h1 {
+        color: white;
+        font-size: 32px;
+        margin: 0;
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 800px;
+        margin: 20px auto;
+        border: none;
+        margin-bottom: 1px;
+      }
+
+      th,
+      td {
+        padding: 8px;
+        text-align: center;
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+        border-top: 2px solid #ddd;
+      }
+      .table-row {
+        background-color: #f8f8f8;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      td:last-child,
+      th:last-child {
+        border-right: none;
+      }
+
+      td.custom {
+        font-weight: bold;
+        color: black;
+      }
+
+      .table-header th {
+        border-bottom: 2px solid #ddd;
+      }
+
+      .table-active {
+        background-color: #f8f8f8;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+      }
+
+      th {
+        background-color: #24a4bc;
+        color: white;
+        text-transform: uppercase;
+        border-bottom: 2px solid #ddd;
+      }
+
+      .table-header th {
+        background-color: rgb(253, 253, 253);
+      }
+
+      #promedio-container {
+        display: flex;
+        justify-content: center;
+        margin-left: 550px;
+      }
+
+      #tabla-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      #informacion {
+        margin-top: 20px;
+        margin-right: 60px;
+        flex-basis: 30%;
+        background-color: #f8f8f8;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="header">
+        <img
+          class="logo"
+          src="https://cdn5.f-cdn.com/contestentries/213247/13024249/554be0756efbb_thumb900.jpg"
+          alt="Logo"
+        />
+        <h1>TV Series</h1>
+      </div>
+    </div>
+    <div id="tabla-container">
+      <div id="table-wrapper" style="width: 700px; margin-left: 60px;">
+        <table id="Tabla-Promedio" style="width: 100%;">
+          <thead>
+            <tr class="table-header">
+              <td class="custom">#</td>
+              <td class="custom">Name</td>
+              <td class="custom">Channel</td>
+              <td class="custom">Seasons</td>
+            </tr>
+          </thead>
+          <tbody id="series"></tbody>
+        </table>
+        <div id="promedio-container"></div>
+      </div>
+      <div id="informacion">
+      </div>
+    </div>
+    <script type="module" src="./scripts/serie.js"></script>
+    <script type="module" src="./scripts/data.js"></script>
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+  </html>
